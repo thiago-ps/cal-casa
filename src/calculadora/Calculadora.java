@@ -7,13 +7,13 @@ public class Calculadora {
   }
 
   private void mostrarMenu() {
-    int opção = 0;
+    int opcao = 0;
 
     do {
       mostrarOpcoes();
-      opção = Integer.parseInt(System.console().readLine());
+      opcao = Integer.parseInt(System.console().readLine());
 
-      if (opção == 0) {
+      if (opcao == 0) {
         System.out.println("Saindo...");
         break;
       }
@@ -24,7 +24,7 @@ public class Calculadora {
       System.out.println("Digite o segundo número:");
       int b = Integer.parseInt(System.console().readLine());
 
-      switch (opção) {
+      switch (opcao) {
         case 1:
           System.out.println("Soma: %s".formatted(somarDoisNumeros(a, b)));
           break;
@@ -41,7 +41,7 @@ public class Calculadora {
           System.out.println("Opção inválida!");
           break;
       }
-    } while (opção != 0);
+    } while (opcao != 0);
   }
 
   private void mostrarOpcoes() {
